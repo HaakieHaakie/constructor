@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input, textarea {
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.w100b,.w100 {
+border:1px solid #ddd;;
+                width:100%;  
+}
+.w100b {
+-mox-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+    border: 1px solid rgb(255, 0, 0);   
+}
+
+::placeholder {
+    color: red;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: red;
+}
+
+::-ms-input-placeholder {
+    color: red;
+    opacity: 1;
+}
+
+
+.error {color: #FF0000;}
+#pre {
+    color: #4a4b63;
+}
+
+.field_set{
+    border-color:#DA3701;
+    border-radius: 25px;  
+}
+
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; } 
+.item4 { grid-area: view; }
+.item5 { grid-area: right; }
+.item6 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header'
+        'menu main main main right'
+        'menu view view view right'
+        'footer footer footer footer footer';
+/*                        grid-gap: 1px;
+                        background-color: #DA3701;
+                        padding: 1px;*/
+}
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+}
+
+.grid-container > .item4 {
+    background-color: #ececec;
+    border-radius: 25px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 14px;
+    color: #DA3701;
+}
+
+/*.grid-container > .item2 {
+    width: 200px;
+}
+.grid-container > .item5 {
+    width: 200px;
+}*/
+
+.controls label {
+    display: inline-block;
+    width: 90px;
+    height: 20px;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 40px;
+}
+.controls input {
+    display: block;
+    margin: 0 auto -40px;
+}
